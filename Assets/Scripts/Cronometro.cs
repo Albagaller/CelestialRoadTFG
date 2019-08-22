@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Cronometro : MonoBehaviour
 {
     public Text txtTiempo;
+    public Text txtTiempo2;
     private float  StartTime;
     private float TimerControl;
 
@@ -29,6 +30,7 @@ public class Cronometro : MonoBehaviour
             int segs = (int)TimerControl % 60;
 
             txtTiempo.text = "" + mins.ToString().PadLeft(2, '0') + ":" + segs.ToString().PadLeft(2, '0');
+            txtTiempo2.text = "" + mins.ToString().PadLeft(2, '0') + ":" + segs.ToString().PadLeft(2, '0');
 
         }
     }

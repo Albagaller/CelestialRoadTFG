@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Gemas : MonoBehaviour
 {
     HudManage hudManage;
+    HudManage hudManage2;
     private Transform miTransform;
     public float velocidad;
     public GameObject gema;
@@ -14,6 +15,8 @@ public class Gemas : MonoBehaviour
     void Start()
     {
         hudManage = GameObject.Find("HUD").GetComponent(typeof(HudManage)) as HudManage;
+        hudManage2 = GameObject.Find("MenuOpciones").GetComponent(typeof(HudManage)) as HudManage;
+
         miTransform = GetComponent<Transform>();  
     }
 
@@ -28,5 +31,6 @@ public class Gemas : MonoBehaviour
         GlobalVariables.gemas++;
         gema.SetActive(false);
         hudManage.DibujarGema();
+        hudManage2.DibujarGema();
     }
 }

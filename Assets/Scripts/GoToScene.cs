@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class GoToScene : MonoBehaviour
 {
 
+   // CambioVR cambioVR;
+
     void Start()
     {
 
@@ -28,8 +30,12 @@ public class GoToScene : MonoBehaviour
         }
         else
         {
+            // cambioVR = GameObject.Find("CambioVR").GetComponent(typeof(CambioVR)) as CambioVR;
+
+
             GlobalVariables.nivelActual = nivel;
             goToScene("Nivel" + nivel);
+          //  cambioVR.ToggleVR();
         }
         
     }

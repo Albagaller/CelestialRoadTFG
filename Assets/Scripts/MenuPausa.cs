@@ -42,6 +42,7 @@ public class MenuPausa : MonoBehaviour
     {
         GlobalVariables.GameIsPause = false;
         goToScene.NewLevel(GlobalVariables.nivelActual);
+        GlobalVariables.gemas = 0;
     }
 
     public void Resume()
