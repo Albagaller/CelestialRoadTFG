@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class GlobalVariables : MonoBehaviour
 { 
     //sonido del juego
-    public static bool sound = true;
+    public static bool mute = false;
     //Unlock levels
     public static int nivelActual = 1;
     public static int nivelesDesbloqueados = 1;

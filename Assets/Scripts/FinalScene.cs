@@ -50,6 +50,8 @@ public class FinalScene : MonoBehaviour
     {
 
         GlobalVariables.nivelActual++;
+        GlobalVariables.nivelesDesbloqueados = PlayerPrefs.GetInt("levelsUnlock");
+
         if (GlobalVariables.nivelesDesbloqueados <= GlobalVariables.nivelActual)
         {
             GlobalVariables.nivelesDesbloqueados = GlobalVariables.nivelActual;
