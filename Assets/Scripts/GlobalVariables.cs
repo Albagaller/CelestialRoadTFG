@@ -14,7 +14,7 @@ public class GlobalVariables : MonoBehaviour
     public static int[] puntuaciones = new int[6];
 
     // Tiempo estimado para cada nivel
-    public static int[] tiempoEstimado = new int[] { 60, 100, 60, 60, 65, 70 };
+    public static int[] tiempoEstimado = new int[] { 85, 90, 100, 110, 120, 150 };
 
     // para la puntuación del nivel
     public static float StartTimeNivel;
