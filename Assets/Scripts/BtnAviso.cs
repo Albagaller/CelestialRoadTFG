@@ -20,6 +20,12 @@ public class BtnAviso : MonoBehaviour
     public void BtnOK()
     {
         aviso.SetActive(false);
-        walk.enabled = true;
+        GlobalVariables.GameIni = false;
+
+        if (!GlobalVariables.GameIsPause)
+        {
+            walk.enabled = true;
+        }
+
     }
 }

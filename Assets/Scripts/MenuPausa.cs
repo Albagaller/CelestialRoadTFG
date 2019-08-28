@@ -49,7 +49,11 @@ public class MenuPausa : MonoBehaviour
     {
         pausaMenu.SetActive(false);
         GlobalVariables.GameIsPause = false;
-        walk.enabled=true;
+
+        if (!GlobalVariables.GameIni)
+        {
+            walk.enabled = true;
+        }
     }
 
     public void Pause()
