@@ -24,7 +24,7 @@ public class GlobalVariables : MonoBehaviour
     //Pausa
     public static bool GameIsPause = false;
 
-    public static bool GameIni = true;
+    public static bool GameIni = false;
 
 
 }

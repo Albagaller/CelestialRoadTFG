@@ -35,7 +35,8 @@ public class MenuPausa : MonoBehaviour
 
     void Update()
     {
-
+        if (GlobalVariables.nivelActual == 1)
+        {
             for (int i = 0; i < 3; i++)
             {
                 if (GlobalVariables.GameIni)
@@ -44,14 +45,17 @@ public class MenuPausa : MonoBehaviour
                     GVRButton gvr = btns[i].GetComponent(typeof(GVRButton)) as GVRButton;
                     gvr.enabled = false;
 
-                } else {         
-          
+                }
+                else
+                {
+
                     btns[i].interactable = true;
                     GVRButton gvr = btns[i].GetComponent(typeof(GVRButton)) as GVRButton;
                     gvr.enabled = true;
-                
-                 }
+
+                }
             }
+        }
    
     }
 
