@@ -16,20 +16,12 @@ public class FinLevel : MonoBehaviour
         cronometro = GameObject.Find("Cronometro").GetComponent(typeof(Cronometro)) as Cronometro;
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("Enter");
-    }
 
     void OnTriggerStay(Collider other)
     {
-        Debug.Log("Stay");
         cronometro.GuardarTiempo();
         goToScene.goToScene("FinNivel");
     }
 
-    void OnTriggerExit(Collider other)
-    {
-        Debug.Log("Exit");
-    }
+
 }

@@ -14,4 +14,9 @@ public class GoLoading : MonoBehaviour
         GlobalVariables.nivelActual = lvl;
         loading.SetActive(true);
     }
+
+    public void next()
+    {
+        loading.SetActive(true);
+    }
 }
