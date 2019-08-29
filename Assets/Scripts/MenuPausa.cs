@@ -15,6 +15,8 @@ public class MenuPausa : MonoBehaviour
     public GameObject[] objetos;
     public Camera cam;
     private Transform miTransform;
+    public Button[] btns;
+
 
     void Start()
     {
@@ -29,6 +31,28 @@ public class MenuPausa : MonoBehaviour
         walk.enabled = false;
         valoresPanel();
 
+    }
+
+    void Update()
+    {
+
+            for (int i = 0; i < 3; i++)
+            {
+                if (GlobalVariables.GameIni)
+                {
+                    btns[i].interactable = false;
+                    GVRButton gvr = btns[i].GetComponent(typeof(GVRButton)) as GVRButton;
+                    gvr.enabled = false;
+
+                } else {         
+          
+                    btns[i].interactable = true;
+                    GVRButton gvr = btns[i].GetComponent(typeof(GVRButton)) as GVRButton;
+                    gvr.enabled = true;
+                
+                 }
+            }
+   
     }
 
     // Vuelve a la ventana de seleccion de nivel

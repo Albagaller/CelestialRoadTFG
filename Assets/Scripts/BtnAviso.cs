@@ -7,6 +7,7 @@ public class BtnAviso : MonoBehaviour
 {
     public GameObject aviso;
     public Autowalk walk;
+    public GameObject panel;
    // CambioVR cambioVR;
 
     // Start is called before the first frame update
@@ -15,6 +16,7 @@ public class BtnAviso : MonoBehaviour
         // cambioVR = GameObject.Find("CambioVR").GetComponent(typeof(CambioVR)) as CambioVR;
        // cambioVR.ToggleVR();
         walk = GameObject.Find("Player").GetComponent<Autowalk>();
+        GlobalVariables.GameIni = true;
     }
 
     public void BtnOK()
@@ -27,5 +29,12 @@ public class BtnAviso : MonoBehaviour
             walk.enabled = true;
         }
 
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        walk.enabled = false;
+        GlobalVariables.GameIni = true;
+        panel.SetActive(true);
     }
 }
