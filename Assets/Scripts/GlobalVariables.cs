@@ -26,5 +26,5 @@ public class GlobalVariables : MonoBehaviour
 
     public static bool GameIni = false;
 
-
+    public static bool primera = true;
 }

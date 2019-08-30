@@ -62,6 +62,7 @@ public class MenuPausa : MonoBehaviour
     // Vuelve a la ventana de seleccion de nivel
     public void VolverAlMenu()
     {
+        GlobalVariables.primera = false;
         GlobalVariables.GameIsPause = false;
         goToScene.goToScene("MenuNiveles");
     }

@@ -112,6 +112,7 @@ public class FinalScene : MonoBehaviour
     // Vuelve a la ventana de seleccion de nivel
     public void VolverAlMenu()
     {
+        GlobalVariables.primera = false;
         goToScene.goToScene("MenuNiveles");
     }
 
@@ -125,7 +126,7 @@ public class FinalScene : MonoBehaviour
         GlobalVariables.nivelActual--;
         goToScene.NewLevel(GlobalVariables.nivelActual);
     }
-
+   
 }
 
 

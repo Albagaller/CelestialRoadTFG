@@ -10,6 +10,7 @@ public class Gemas : MonoBehaviour
     private Transform miTransform;
     public float velocidad;
     public GameObject gema;
+    public GameObject audio;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,7 @@ public class Gemas : MonoBehaviour
         hudManage = GameObject.Find("HUD").GetComponent(typeof(HudManage)) as HudManage;
         hudManage2 = GameObject.Find("MenuOpciones").GetComponent(typeof(HudManage)) as HudManage;
 
-        miTransform = GetComponent<Transform>();  
+        miTransform = GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -28,9 +29,19 @@ public class Gemas : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        PlayClick();
         GlobalVariables.gemas++;
-        gema.SetActive(false);
         hudManage.DibujarGema();
         hudManage2.DibujarGema();
+        gema.SetActive(false);
     }
+
+    void PlayClick()
+    {
+        //gameObject.AddComponent<AudioSource>();
+        audio.GetComponent<AudioSource>().clip = Resources.Load("button_click") as AudioClip;
+        audio.GetComponent<AudioSource>().volume = 1;
+        audio.GetComponent<AudioSource>().Play();
+    }
+
 }

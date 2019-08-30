@@ -21,6 +21,8 @@ public class BtnAviso : MonoBehaviour
 
     public void BtnOK()
     {
+        PlayClick();
+
         aviso.SetActive(false);
         GlobalVariables.GameIni = false;
 
@@ -36,5 +38,15 @@ public class BtnAviso : MonoBehaviour
         walk.enabled = false;
         GlobalVariables.GameIni = true;
         panel.SetActive(true);
+    }
+
+
+
+    void PlayClick()
+    {
+        gameObject.AddComponent<AudioSource>();
+        GetComponent<AudioSource>().clip = Resources.Load("button_click") as AudioClip;
+        GetComponent<AudioSource>().volume = 1;
+        GetComponent<AudioSource>().Play();
     }
 }

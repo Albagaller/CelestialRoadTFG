@@ -12,6 +12,8 @@ public class BtnSound : MonoBehaviour
         if (PlayerPrefs.GetInt("mute") == 0)
         {
             btn.SetActive(true);
+            AudioListener.pause = true;
+
         }
         else
         {
