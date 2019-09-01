@@ -9,7 +9,7 @@ public class BtnSound : MonoBehaviour
 
     void Start()
     {
-        if (PlayerPrefs.GetInt("mute") == 0)
+        if (PlayerPrefs.GetInt("mute") == 1)
         {
             btn.SetActive(true);
             AudioListener.pause = true;
@@ -18,6 +18,7 @@ public class BtnSound : MonoBehaviour
         else
         {
             btn.SetActive(false);
+            AudioListener.pause = false;
 
         }
 
@@ -29,12 +30,12 @@ public class BtnSound : MonoBehaviour
 
         if (AudioListener.pause == true) {
             btn.SetActive(true);
-            PlayerPrefs.SetInt("mute", 0);
+            PlayerPrefs.SetInt("mute", 1);
         }
         else
         {
             btn.SetActive(false);
-            PlayerPrefs.SetInt("mute", 1);
+            PlayerPrefs.SetInt("mute", 0);
 
         }
     }

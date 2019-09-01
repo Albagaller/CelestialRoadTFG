@@ -1752,6 +1752,7 @@ GameObject:
   - component: {fileID: 779226679}
   - component: {fileID: 779226678}
   - component: {fileID: 779226681}
+  - component: {fileID: 779226684}
   - component: {fileID: 779226682}
   - component: {fileID: 779226683}
   m_Layer: 0
@@ -1946,7 +1947,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas1: {fileID: 1245886890}
-  canvas2: {fileID: 814509961}
+--- !u!114 &779226684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779226677}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9694fe626471d704bb802dc8d4e67343, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  devi: None
 --- !u!1 &801000433
 GameObject:
   m_ObjectHideFlags: 0

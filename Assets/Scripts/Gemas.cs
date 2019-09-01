@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.XR;
+using System;
+
 
 public class Gemas : MonoBehaviour
 {
@@ -32,7 +35,10 @@ public class Gemas : MonoBehaviour
         PlayClick();
         GlobalVariables.gemas++;
         hudManage.DibujarGema();
-        hudManage2.DibujarGema();
+        if (String.Compare(XRSettings.loadedDeviceName, "cardboard", true) != 0)
+        {
+            hudManage2.DibujarGema();
+        }
         gema.SetActive(false);
     }
 

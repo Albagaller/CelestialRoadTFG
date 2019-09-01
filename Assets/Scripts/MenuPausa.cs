@@ -64,6 +64,7 @@ public class MenuPausa : MonoBehaviour
     {
         GlobalVariables.primera = false;
         GlobalVariables.GameIsPause = false;
+        ClearLevel();
         goToScene.goToScene("MenuNiveles");
     }
 
@@ -72,6 +73,7 @@ public class MenuPausa : MonoBehaviour
         GlobalVariables.GameIsPause = false;
         goToScene.NewLevel(GlobalVariables.nivelActual);
         GlobalVariables.gemas = 0;
+        ClearLevel();
     }
 
     public void Resume()
@@ -136,6 +138,12 @@ public class MenuPausa : MonoBehaviour
         DibujarGemas();
         ColocarPanel();
         CalcularTiempo();
+    }
+
+    // Dibujar estrellas 
+    public void ClearLevel()
+    {
+        GlobalVariables.gemas = 0;
     }
 
 }
