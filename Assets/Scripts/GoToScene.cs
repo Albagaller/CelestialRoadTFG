@@ -17,6 +17,8 @@ public class GoToScene : MonoBehaviour
     // Cambiar escena solo hay que pasar el nombre de la escena
     public void goToScene(string escena)
     {
+        GlobalVariables.primera = false;
+
         PlayClick();
         SceneManager.LoadScene(escena);
     }

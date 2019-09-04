@@ -13,6 +13,9 @@ public class FinalScene : MonoBehaviour
     public GameObject[] estrellas;
     public GameObject[] objetos;
 
+    public GameObject btns;
+    public GameObject btnfin;
+
 
     void Start()
     {
@@ -20,6 +23,12 @@ public class FinalScene : MonoBehaviour
         goToScene = GameObject.Find("GoToScene").GetComponent(typeof(GoToScene)) as GoToScene;
         CalcularTiempo();
         DibujarGemas();
+
+        if (GlobalVariables.nivelActual == 6)
+        {
+            btns.SetActive(false);
+            btnfin.SetActive(true);
+        }
         CalcularValoracion();
         DesbloquearNivel();
         ClearLevel();

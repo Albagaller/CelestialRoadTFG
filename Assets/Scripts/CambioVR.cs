@@ -13,7 +13,9 @@ public class CambioVR : MonoBehaviour
     public GameObject gema2;
     public GameObject gema3;
     HudManage hudManage2;
-
+    public GameObject gemaC1;
+    public GameObject gemaC2;
+    public GameObject gemaC3;
 
 
     void Start()
@@ -28,22 +30,35 @@ public class CambioVR : MonoBehaviour
     public void ToggleVR()
     {
 
-        if (devi != "")
+        if (devi == "None")
         {
-            StartCoroutine(LoadDevice(devi));
+            StartCoroutine(LoadDevice("None"));
+            tiempo.SetActive(false);
+            gema1.SetActive(false);
+            gema2.SetActive(false);
+            gema3.SetActive(false);
+            gemaC1.SetActive(false);
+            gemaC2.SetActive(false);
+            gemaC3.SetActive(false);
+            hudManage2.enabled = false;
+            GlobalVariables.vr = false;
         }
-        else { 
-            if (String.Compare(XRSettings.loadedDeviceName, "cardboard", true) == 0)
-            {
+            else if (devi == "cardboard")
+        {
+            StartCoroutine(LoadDevice("cardboard"));
+            tiempo.SetActive(true);
+            gema1.SetActive(true);
+            gema2.SetActive(true);
+            gema3.SetActive(true);
+            hudManage2.DibujarGemas();
+            GlobalVariables.vr = true;
 
-                StartCoroutine(LoadDevice("None"));
-            }
-            else
-            {
-
-                StartCoroutine(LoadDevice("cardboard"));
-            }
         }
+        else
+        {
+            changeVR();
+        }
+        
     }
 
     public void changeVR()
@@ -51,19 +66,22 @@ public class CambioVR : MonoBehaviour
 
         if (String.Compare(XRSettings.loadedDeviceName, "cardboard", true) == 0)
         {
-
             StartCoroutine(LoadDevice("None"));
             gyro.enabled = true;
             tiempo.SetActive(false);
             gema1.SetActive(false);
             gema2.SetActive(false);
             gema3.SetActive(false);
+            gemaC1.SetActive(false);
+            gemaC2.SetActive(false);
+            gemaC3.SetActive(false);
+            hudManage2.enabled = false;
+            GlobalVariables.vr = false;
 
 
         }
         else
         {
-
             StartCoroutine(LoadDevice("cardboard"));
             gyro.enabled = false;
             camara.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
@@ -71,7 +89,9 @@ public class CambioVR : MonoBehaviour
             gema1.SetActive(true);
             gema2.SetActive(true);
             gema3.SetActive(true);
-            hudManage2.DibujarGemas();
+             hudManage2.DibujarGemas();
+            GlobalVariables.vr = true;
+
 
         }
 

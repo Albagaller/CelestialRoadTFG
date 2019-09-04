@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinNivel.unity
     guid: 727b6401008d52e479c89dd9c42ec6d8
+  - enabled: 1
+    path: Assets/Scenes/Creditos.unity
+    guid: 44eb3cba26efd67449231eae77ac25c8
   m_configObjects: {}

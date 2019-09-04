@@ -35,8 +35,7 @@ public class Gemas : MonoBehaviour
         PlayClick();
         GlobalVariables.gemas++;
         hudManage.DibujarGema();
-        if (String.Compare(XRSettings.loadedDeviceName, "cardboard", true) != 0)
-        {
+        if (GlobalVariables.vr == true){
             hudManage2.DibujarGema();
         }
         gema.SetActive(false);

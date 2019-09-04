@@ -13,7 +13,6 @@ public class Canvasinicio : MonoBehaviour
         if (GlobalVariables.primera)
         {
             canvas1.SetActive(true);
-
         }
         else
         {

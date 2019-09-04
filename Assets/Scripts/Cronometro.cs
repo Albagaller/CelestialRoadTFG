@@ -21,7 +21,7 @@ public class Cronometro : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GlobalVariables.GameIsPause)
+        if (!GlobalVariables.GameIsPause && !GlobalVariables.GameIni)
         {
             TimerControl += 1 * Time.deltaTime;
 
