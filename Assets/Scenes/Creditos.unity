@@ -481,12 +481,15 @@ MonoBehaviour:
     Luisa Sempere Tortosa\n\nDise\xF1o:\nAlba Gonz\xE1lez Aller\n\nModelado:\nAlba
     Gonz\xE1lez Aller\n\nTexturizado:\nAlba Gonz\xE1lez Aller\nContains assets from
     Poliigon.com - Assets may not be redistributed\n\nProgramaci\xF3n:\nAlba Gonz\xE1lez
-    Aller\n\nM\xFAsica:\n\"Celtc Knight\" - Ebunny\n\"Exploring the Dungeon Game Background\"
-    - FiluAndDina \n\"Game Background 2\" - FiluAndDina\n\"Game Background 3\" - FiluAndDina\n\"Game
-    Background 4\" - FiluAndDina\n\"Game Background 6\" - FiluAndDina\n\"Magic Game
-    Background\" - FiluAndDina\n\"Video Game Background 2\" - FiluAndDina\n\"Jazzy
-    Game Background\" - FiluAndDina\n\nAgradecimientos especiales a:\nSantiago Gonz\xE1lez
-    Berruga\n\nCopyright \xA9 2019\nTodos los derechos reservados\n\n"
+    Aller\n\nM\xFAsica:\n\"Celtc Knight\" by Ebunny\nDisponible en: www.jamendo.com\nBajo
+    licencia CC  BY-NC-ND 4.0. https://creativecommons.org/licenses/by-nc-nd/4.0/\n\n\"Exploring
+    the Dungeon Game Background\" - FiluAndDina \n\"Game Background 2\" by FiluAndDina\n\"Game
+    Background 3\" by FiluAndDina\n\"Game Background 4\" by FiluAndDina\n\"Game Background
+    6\" by FiluAndDina\n\"Magic Game Background\" by FiluAndDina\n\"Video Game Background
+    2\" by FiluAndDina\n\"Jazzy Game Background\" by FiluAndDina\nDisponibles en:
+    www.jamendo.com\nBajo licencia CC  BY-NC 4.0 https://creativecommons.org/licenses/by-nc/4.0/\n\nAgradecimientos
+    especiales a:\nSantiago Gonz\xE1lez Berruga\n\nCopyright \xA9 2019\nTodos los
+    derechos reservados\n\n"
 --- !u!222 &274202373
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -897,7 +900,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3, y: -100.9}
+  m_AnchoredPosition: {x: -3, y: -137.9}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &635236623
@@ -1167,7 +1170,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.0000095, y: -123.241295}
+  m_AnchoredPosition: {x: 7.0000095, y: -160.24127}
   m_SizeDelta: {x: 224.71, y: 106.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1339115266
